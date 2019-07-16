@@ -19,14 +19,9 @@ def _run_test_case(test_case: dict, function: Callable) -> None:
     """Helper to run a test case."""
     args = test_case.get('args', [])
     kwargs = test_case.get('kwargs', {})
-    raises = test_case.get('raises')
-    if raises:
-        with pytest.raises(raises):
-            function(*args, **kwargs)
-    else:
-        result = list(function(*args, **kwargs))
-        expected = test_case.get('expected_result')
-        assert result == expected
+    result = list(function(*args, **kwargs))
+    expected = test_case.get('expected_result')
+    assert result == expected
 
 
 @pytest.mark.parametrize('test_case', TEST_CASES)

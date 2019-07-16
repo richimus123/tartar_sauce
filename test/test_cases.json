@@ -3,9 +3,8 @@
     "args": [],
     "kwargs": {
       "include_filename": true,
-      "sub_file": "a"
+      "sub_file_name": "a"
     },
-    "raises": null,
     "expected_result": [
       "temp/a",
       "Here is a line.\n",
@@ -17,23 +16,13 @@
     "args": [],
     "kwargs": {
       "include_filename": false,
-      "sub_file": "b"
+      "sub_file_name": "b"
     },
-    "raises": null,
     "expected_result": [
       "01\n",
       "23\n",
       "abc\n",
       "123\n"
     ]
-  },
-    {
-    "args": [],
-    "kwargs": {
-      "include_filename": false,
-      "sub_file": "c"
-    },
-    "raises": "KeyError",
-    "expected_result": null
   }
 ]

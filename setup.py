@@ -24,9 +24,9 @@ with open(REQUIREMENTS_FILE, 'rt') as requirements_file:
 # pylint: disable=bad-whitespace
 setuptools.setup(
     name              = 'tartar_sauce',
-    version           = '0.0.0.2',
+    version           = '0.0.0.3',
     description       = 'Tarfile archive helpers',
-    maintainer        = 'richimuks123',
+    maintainer        = 'richimus123',
     maintainer_email  = '',
     url               = 'https://github.com/richimus123/tartar_sauce',
     packages          = PACKAGES,
