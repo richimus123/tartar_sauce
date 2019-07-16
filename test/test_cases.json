@@ -1,0 +1,39 @@
+[
+  {
+    "args": [],
+    "kwargs": {
+      "include_filename": true,
+      "sub_file": "a"
+    },
+    "raises": null,
+    "expected_result": [
+      "temp/a",
+      "Here is a line.\n",
+      "Here is another.\n",
+      "Yet another Line here.\n"
+    ]
+  },
+    {
+    "args": [],
+    "kwargs": {
+      "include_filename": false,
+      "sub_file": "b"
+    },
+    "raises": null,
+    "expected_result": [
+      "01\n",
+      "23\n",
+      "abc\n",
+      "123\n"
+    ]
+  },
+    {
+    "args": [],
+    "kwargs": {
+      "include_filename": false,
+      "sub_file": "c"
+    },
+    "raises": "KeyError",
+    "expected_result": null
+  }
+]
