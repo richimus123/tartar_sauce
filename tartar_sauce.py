@@ -37,23 +37,23 @@ def read_archive(
             # Include all archived files.
             sub_file_names = archived_files
 
-        for subfile in sub_file_names or []:
+        for sub_file in sub_file_names or []:
             filename_given = False
-            if not subfile.isubfile():
+            if not sub_file.isfile():
                 # Skip directories
                 continue
             # Temporarily unpack the file for reading
-            extracted = archive.extractfile(subfile.name)
+            extracted = archive.extractfile(sub_file.name)
             if include_filename and filename_given is False:
                 # First yield the archived filename for reference.
-                yield subfile.name
+                yield sub_file.name
                 filename_given = True
 
             # Iterate over lines and decode them from the unpacked file:
             for line in extracted:
                 if include_filename:
                     if not filename_given:
-                        yield subfile.name
+                        yield sub_file.name
                         filename_given = True
                 # Decode binary lines to UTF-8.
                 if hasattr(line, 'decode'):
